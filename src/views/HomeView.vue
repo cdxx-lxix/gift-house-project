@@ -183,7 +183,7 @@
       </div>
 
       <div class="my-4">
-        <h1 class="text-lg text-center px-8 font-medium text-[#5E4B40] mb-8">САМЫЙ БОЛЬШОЙ
+        <h1 class="text-md leading-5 text-center px-4 background-blur font-medium text-[#5E4B40] mb-8">САМЫЙ БОЛЬШОЙ
           ОНЛАЙН-МАГАЗИН
           ОРИГИНАЛЬНЫХ ПОДАРКОВ
           С ЛАЗЕРНЫМ ГРАВИРОВАНИЕМ ДЛЯ СЕБЯ, ДРУЗЕЙ, СЕМЬИ, КОЛЛЕГ, ЛЮБИМЫХ.</h1>
