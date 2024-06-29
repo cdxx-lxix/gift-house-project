@@ -11,7 +11,7 @@ import lighter from "../assets/items/lighter.png"
 import pipe from "../assets/items/pipe.png"
 
 export const useBasketStore = defineStore("basket", () => {
-  const basketItems = ref([{ "product": { "id": 1, "img": "assets/items/portrait.png", "name": "Портрет \"Девушка\"", "price": "1 111 р." }, "amount": 1 }]);
+  const basketItems = ref([]);
   const addItem = (id) => {
     if (basketItems.value.some((el) => el.product.id == id)) {
       let temp = basketItems.value.findIndex((el) => el.product.id == id);

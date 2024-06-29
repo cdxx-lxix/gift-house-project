@@ -5,6 +5,9 @@
                 <div class="mt-5 text-lg background-blur">+7 (999) 999 99 99</div>
                 <RouterLink to="/cart" class="w-12 h-12 p-2 flex justify-center items-end background-blur">
                     <img :src="cart" alt="cart icon">
+                    <div v-show="store.basketItems.length"
+                        class="absolute inline-flex text-center items-center justify-center w-5 h-5 top-4 right-14 text-xs font-bold text-white bg-[#FF6700] rounded-full">
+                        {{ store.basketItems.length }}</div>
                 </RouterLink>
             </div>
             <div class="mx-auto">
@@ -22,4 +25,6 @@ import { RouterLink } from 'vue-router'
 import wood from '../assets/wooden_pattern.png'
 import logo from '../assets/logo.png'
 import cart from '../assets/cart.png'
+import { useBasketStore } from '../stores/basket.js'
+const store = useBasketStore()
 </script>

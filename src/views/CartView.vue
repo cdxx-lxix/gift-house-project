@@ -48,7 +48,7 @@
                             <div>
                                 <div class="inline-flex items-center w-[16rem] justify-between gap-4">
                                     <div>{{ item.product.name }}</div>
-                                    <button class="w-4 h-4 p-0.5 rounded-sm bg-[#DBD5CA]/70 flex items-center shadow-md">
+                                    <button class="w-4 h-4 p-0.5 rounded-sm bg-[#DBD5CA]/70 flex items-center shadow-md" @click="store.deleteItem(index)">
                                         <svg class="w-4 h-4" viewBox="0 0 24 24"
                                             xmlns="http://www.w3.org/2000/svg">
                                             <path

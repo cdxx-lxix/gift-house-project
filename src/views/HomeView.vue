@@ -6,6 +6,9 @@
         <div class="mt-5 text-lg background-blur">+7 (999) 999 99 99</div>
         <RouterLink to="/cart" class="w-14 h-14 p-2 flex justify-center items-end background-blur">
           <img :src="cart" alt="cart icon">
+          <div v-show="store.basketItems.length"
+            class="absolute inline-flex text-center items-center justify-center w-5 h-5 top-6 right-16 text-xs font-bold text-white bg-[#FF6700] rounded-full">
+            {{ store.basketItems.length }}</div>
         </RouterLink>
       </div>
 
@@ -45,9 +48,12 @@
       <h2 class="text-center text-5xl chibola text-[#2C221C] mb-16">ПОПУЛЯРНЫЕ ТОВАРЫ</h2>
     </section>
     <section class="my-8 w-full grid grid-cols-3 gap-16 justify-between">
-      <ProductCard :id="store.products[0].id" :name="store.products[0].name" :image="store.products[0].img" :price="store.products[0].price" />
-      <ProductCard :id="store.products[1].id" :name="store.products[1].name" :image="store.products[1].img" :price="store.products[1].price" />
-      <ProductCard :id="store.products[2].id" :name="store.products[2].name" :image="store.products[2].img" :price="store.products[2].price" />
+      <ProductCard :id="store.products[0].id" :name="store.products[0].name" :image="store.products[0].img"
+        :price="store.products[0].price" />
+      <ProductCard :id="store.products[1].id" :name="store.products[1].name" :image="store.products[1].img"
+        :price="store.products[1].price" />
+      <ProductCard :id="store.products[2].id" :name="store.products[2].name" :image="store.products[2].img"
+        :price="store.products[2].price" />
     </section>
 
     <section class="w-full inline-flex gap-12 justify-center mt-2 mb-10">
@@ -101,17 +107,23 @@
       <h2 class="text-center text-5xl chibola text-[#2C221C] mb-16">КАТАЛОГ ТОВАРОВ</h2>
     </section>
     <section class="my-8 w-full grid grid-cols-3 gap-16 mb-16 justify-between">
-      <ProductCard :id="store.products[3].id" :name="store.products[3].name" :image="store.products[3].img" :price="store.products[3].price" />
-      <ProductCard :id="store.products[4].id" :name="store.products[4].name" :image="store.products[4].img" :price="store.products[4].price" />
-      <ProductCard :id="store.products[5].id" :name="store.products[5].name" :image="store.products[5].img" :price="store.products[5].price" />
+      <ProductCard :id="store.products[3].id" :name="store.products[3].name" :image="store.products[3].img"
+        :price="store.products[3].price" />
+      <ProductCard :id="store.products[4].id" :name="store.products[4].name" :image="store.products[4].img"
+        :price="store.products[4].price" />
+      <ProductCard :id="store.products[5].id" :name="store.products[5].name" :image="store.products[5].img"
+        :price="store.products[5].price" />
     </section>
     <div class="absolute right-[22%]">
-        <img class="w-14 h-14 transform rotate-[25deg] opacity-40" :src="lighter" alt="lighter icon">
-      </div>
+      <img class="w-14 h-14 transform rotate-[25deg] opacity-40" :src="lighter" alt="lighter icon">
+    </div>
     <section class="my-8 w-full grid grid-cols-3 gap-16 justify-between">
-      <ProductCard :id="store.products[6].id" :name="store.products[6].name" :image="store.products[6].img" :price="store.products[6].price" />
-      <ProductCard :id="store.products[7].id" :name="store.products[7].name" :image="store.products[7].img" :price="store.products[7].price" />
-      <ProductCard :id="store.products[8].id" :name="store.products[8].name" :image="store.products[8].img" :price="store.products[8].price" />
+      <ProductCard :id="store.products[6].id" :name="store.products[6].name" :image="store.products[6].img"
+        :price="store.products[6].price" />
+      <ProductCard :id="store.products[7].id" :name="store.products[7].name" :image="store.products[7].img"
+        :price="store.products[7].price" />
+      <ProductCard :id="store.products[8].id" :name="store.products[8].name" :image="store.products[8].img"
+        :price="store.products[8].price" />
     </section>
 
     <section class="w-full">
