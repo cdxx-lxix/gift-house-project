@@ -11,13 +11,13 @@ import lighter from "../assets/items/lighter.png"
 import pipe from "../assets/items/pipe.png"
 
 export const useBasketStore = defineStore("basket", () => {
-  const basketItems = ref([]);
+  const basketItems = ref([{ "product": { "id": 1, "img": "/src/assets/items/portrait.png", "name": "Портрет \"Девушка\"", "price": "1 111 р." }, "amount": 1 }]);
   const addItem = (id) => {
     if (basketItems.value.some((el) => el.product.id == id)) {
       let temp = basketItems.value.findIndex((el) => el.product.id == id);
       increaseAmount(temp);
     } else {
-      basketItems.value.push({ film: products[id], amount: 1 });
+      basketItems.value.push({ product: products[id], amount: 1 });
     }
   };
 
@@ -37,7 +37,7 @@ export const useBasketStore = defineStore("basket", () => {
   };
 
   const totalSum = computed(() => {
-    return basketItems.value.reduce((accumulator, currentValue) => accumulator + currentValue.amount * currentValue.film.price, 0);
+    return basketItems.value.reduce((accumulator, currentValue) => accumulator + currentValue.amount * currentValue.product.price, 0);
   });
 
   const clearBasket = () => {

@@ -1,6 +1,7 @@
 import { createRouter, createWebHistory } from "vue-router";
-import HomeView from '../views/HomeView.vue'
+import HomeView from '../views/HomeView.vue';
 import ItemView from "../views/ItemView.vue";
+import CartView from '../views/CartView.vue';
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -18,11 +19,16 @@ const router = createRouter({
       component: HomeView,
     },
     {
-      // Template for a detailed view of the film.
+      // Template for a detailed view of the item.
       path: "/:id",
       name: "item",
       component: ItemView,
       props: true,
+    },
+    {
+      path: "/cart",
+      name: "cart",
+      component: CartView,
     },
   ],
 });
