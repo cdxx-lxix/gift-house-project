@@ -3,7 +3,7 @@
     <section class="w-full max-h-[23rem] min-h-[23rem]">
 
       <div class="absolute right-[20%] z-10 w-full inline-flex justify-end items-center gap-8 pt-6 pr-16">
-        <div class="mt-5 text-lg text-blur">+7 (999) 999 99 99</div>
+        <div class="mt-5 text-lg background-blur">+7 (999) 999 99 99</div>
         <div class="w-14 h-14 p-2 flex justify-center items-end background-blur">
           <img :src="cart" alt="cart icon">
         </div>
@@ -33,7 +33,7 @@
     </section>
 
     <section class="py-6">
-      <h1 class="text-xl text-center px-8 font-medium text-[#5E4B40] text-blur mb-8">САМЫЙ БОЛЬШОЙ ОНЛАЙН-МАГАЗИН
+      <h1 class="text-xl text-center px-8 font-medium text-[#5E4B40] background-blur mb-8">САМЫЙ БОЛЬШОЙ ОНЛАЙН-МАГАЗИН
         ОРИГИНАЛЬНЫХ ПОДАРКОВ
         С ЛАЗЕРНЫМ ГРАВИРОВАНИЕМ ДЛЯ СЕБЯ, ДРУЗЕЙ, СЕМЬИ, КОЛЛЕГ, ЛЮБИМЫХ.</h1>
     </section>
@@ -42,7 +42,7 @@
       <div class="absolute ">
         <img class="w-14 h-14 transform rotate-[-25deg] opacity-60" :src="case_icon" alt="case icon">
       </div>
-      <h2 class="text-center text-4xl chibola text-[#2C221C] mb-16">ПОПУЛЯРНЫЕ ТОВАРЫ</h2>
+      <h2 class="text-center text-5xl chibola text-[#2C221C] mb-16">ПОПУЛЯРНЫЕ ТОВАРЫ</h2>
     </section>
     <section class="my-8 w-full grid grid-cols-3 gap-16 justify-between">
       <ProductCard :name="store.products[0].name" :image="store.products[0].img" :price="store.products[0].price" />
@@ -66,7 +66,7 @@
       </button>
     </section>
 
-    <section class="grid grid-cols-5 w-full px-8 mb-12">
+    <section class="grid grid-cols-5 w-full px-8 mb-6">
       <div class="bg-gray-50/70 text-center border border-black py-3 inline-flex items-center gap-4 justify-center">
         <select class=" bg-transparent px-2">
           <option selected>Для нее</option>
@@ -95,22 +95,27 @@
     </section>
 
     <section class="w-full">
-      <div class="absolute">
+      <div class="w-full block">
         <img class="w-14 h-14 transform rotate-[25deg] opacity-40" :src="wallet" alt="wallet icon">
       </div>
-      <h2 class="text-center text-4xl chibola text-[#2C221C] mb-16">КАТАЛОГ ТОВАРОВ</h2>
+      <h2 class="text-center text-5xl chibola text-[#2C221C] mb-16">КАТАЛОГ ТОВАРОВ</h2>
     </section>
-    <section class="my-8 w-full grid grid-cols-3 gap-16 justify-between">
+    <section class="my-8 w-full grid grid-cols-3 gap-16 mb-16 justify-between">
       <ProductCard :name="store.products[3].name" :image="store.products[3].img" :price="store.products[3].price" />
       <ProductCard :name="store.products[4].name" :image="store.products[4].img" :price="store.products[4].price" />
       <ProductCard :name="store.products[5].name" :image="store.products[5].img" :price="store.products[5].price" />
+    </section>
+    <div class="absolute right-[22%]">
+        <img class="w-14 h-14 transform rotate-[25deg] opacity-40" :src="lighter" alt="lighter icon">
+      </div>
+    <section class="my-8 w-full grid grid-cols-3 gap-16 justify-between">
       <ProductCard :name="store.products[6].name" :image="store.products[6].img" :price="store.products[6].price" />
       <ProductCard :name="store.products[7].name" :image="store.products[7].img" :price="store.products[7].price" />
       <ProductCard :name="store.products[8].name" :image="store.products[8].img" :price="store.products[8].price" />
     </section>
 
     <section class="w-full">
-      <div class="absolute">
+      <div class="w-full block">
         <img class="w-14 h-14 transform rotate-[-85deg] opacity-40" :src="pen" alt="pen icon">
       </div>
       <h2 class="text-center text-4xl chibola text-[#2C221C]">ㅤ</h2>
@@ -119,6 +124,21 @@
       <img class="w-12 h-12 mx-auto" :src="loading" alt="loading icon">
       <img class="w-12 h-12 mx-auto mb-12 opacity-0" :src="loading" alt="loading icon">
     </section>
+
+    <div class="fixed bottom-20 right-[20%] z-50 mt-24 mr-2">
+      <div class="p-2 mb-2 rounded-full bg-gray-300/90 cursor-pointer opacity-70 border border-black">
+        <svg class="w-8 h-8" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <path
+            d="M16.6 14c-.2-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.6.8-.8 1c-.1.2-.3.2-.5.1-.7-.3-1.4-.7-2-1.2-.5-.5-1-1.1-1.4-1.7-.1-.2 0-.4.1-.5s.2-.3.4-.4c.1-.1.2-.3.2-.4.1-.1.1-.3 0-.4S9.7 8.5 9.5 8c-.1-.7-.3-.7-.5-.7h-.5c-.2 0-.5.2-.6.3Q7 8.5 7 9.7c.1.9.4 1.8 1 2.6 1.1 1.6 2.5 2.9 4.2 3.7.5.2.9.4 1.4.5.5.2 1 .2 1.6.1.7-.1 1.3-.6 1.7-1.2.2-.4.2-.8.1-1.2zm2.5-9.1C15.2 1 8.9 1 5 4.9c-3.2 3.2-3.8 8.1-1.6 12L2 22l5.3-1.4c1.5.8 3.1 1.2 4.7 1.2 5.5 0 9.9-4.4 9.9-9.9.1-2.6-1-5.1-2.8-7m-2.7 14c-1.3.8-2.8 1.3-4.4 1.3-1.5 0-2.9-.4-4.2-1.1l-.3-.2-3.1.8.8-3-.2-.3c-2.4-4-1.2-9 2.7-11.5S16.6 3.7 19 7.5c2.4 3.9 1.3 9-2.6 11.4" />
+        </svg>
+      </div>
+      <div class="p-2 rounded-full bg-gray-300/90 cursor-pointer opacity-70 border border-black">
+        <svg class="w-8 h-8" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+          <path d="M0 0h48v48H0z" fill="none" />
+          <path d="m6.586 30.585 2.828 2.828L24 18.827l14.586 14.586 2.828-2.828L24 13.171z" />
+        </svg>
+      </div>
+    </div>
 
   </main>
 </template>
@@ -131,6 +151,7 @@ import case_icon from '../assets/case.png'
 import wallet from '../assets/wallet.png'
 import pen from '../assets/pen.png'
 import loading from '../assets/loading.png'
+import lighter from '../assets/lighter.png'
 import { useBasketStore } from '../stores/basket.js'
 import ProductCard from '../components/ProductCard.vue'
 
@@ -141,7 +162,7 @@ const store = useBasketStore();
 <style>
 @font-face {
   font-family: "Chibola";
-  src: url("https://fontsforyou.com/fonts/c/Chibola.ttf");
+  src: url("../assets/Chibola.woff") format('woff');
 }
 
 .moserrat {
@@ -167,7 +188,9 @@ main {
 .text-blur {
   text-shadow: #ffffff 0 0 20px;
 }
+
 .break-line-option {
-      white-space: pre-line; /* This allows line breaks to be respected */
-    }
+  white-space: pre-line;
+  /* This allows line breaks to be respected */
+}
 </style>
