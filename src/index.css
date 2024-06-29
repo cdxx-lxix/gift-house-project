@@ -1,0 +1,14 @@
+/* ./src/index.css */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+  .film-item:last-child,
+  .film-item:nth-child(10) {
+    @apply lg:col-span-3 mt-4;
+  }
+  .film-item:last-child {
+    @apply md:col-span-6 lg:col-span-3;
+  }
+}
