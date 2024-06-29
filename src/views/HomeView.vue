@@ -31,6 +31,9 @@
             </button>
           </div>
         </div>
+        <div class="absolute right-[23%] top-1/4">
+          <img class="w-24 h-24 transform rotate-[-20deg] opacity-40" :src="keychain" alt="lighter icon">
+        </div>
       </form>
 
     </section>
@@ -164,6 +167,7 @@ import wallet from '../assets/wallet.png'
 import pen from '../assets/pen.png'
 import loading from '../assets/loading.png'
 import lighter from '../assets/lighter.png'
+import keychain from '../assets/keychain.png'
 import { useBasketStore } from '../stores/basket.js'
 import ProductCard from '../components/ProductCard.vue'
 
